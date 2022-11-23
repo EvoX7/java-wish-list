@@ -15,26 +15,32 @@ public class Main {
 		System.out.println("WishList");
 		System.out.println("--------------------");
 
-		System.out.print("Do you want to insert a wish?: yes/no \n");
-		String response = sc.nextLine();
+
 
 		while (true) {
+			System.out.print("Do you want to insert a wish?: yes/no \n");
+			String response = sc.nextLine();
+
 			if (response.equals("yes")) {
+
+
 				System.out.print("Add wish: \n");
 				String wish = sc.nextLine();
 
 				wishes.add(wish);
 
 				System.out.println("\nList length is: " + wishes.size() + "\n");
-				Collections.sort(wishes);
-				System.out.println(wishes);
-				
+
 				continue;
+
+
 			}
 			break;
-
 		}
+		
+		System.out.println(wishes);
+		Collections.sort(wishes);
 
 	}
-
 }
+
